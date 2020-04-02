@@ -9,6 +9,7 @@ public class LifeDamage : MonoBehaviour
     private float vida;
     public GameObject lifeText;
     //public Text textbox;
+    private Animator anim;
 
 
     void Start()
@@ -16,6 +17,7 @@ public class LifeDamage : MonoBehaviour
       vida = 100;
       //textbox = GetComponent<Text>();
       lifeText = GameObject.Find("LifeText");
+      anim = GetComponent<Animator> ();
 
     }
 
@@ -28,7 +30,7 @@ public class LifeDamage : MonoBehaviour
               //Destroy(gameObject);
          }
          if(other.gameObject.tag=="life_potion"){
-              vida += 1;
+              vida += 10;
               //Debug.Log(vida);
               //Destroy(gameObject);
          }
@@ -41,6 +43,17 @@ public class LifeDamage : MonoBehaviour
     {
      lifeText.GetComponent<Text>().text = "Vida:" + vida +"%";
 
+     if(vida < 0){
+      anim.SetFloat("Vida", vida);
+      Invoke("Reload_Level", 1.0f);
+
+     }
+
+
+    }
+
+    void Reload_Level(){
+      Application.LoadLevel(Application.loadedLevel);
     }
 
 }
