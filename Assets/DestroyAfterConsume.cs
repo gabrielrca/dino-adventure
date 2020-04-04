@@ -13,6 +13,7 @@ public class DestroyAfterConsume : MonoBehaviour
     void OnCollisionStay2D(Collision2D other)
     {
          if(other.gameObject.tag=="Player"){
+           //Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
               Destroy(gameObject);
               //Debug.Log(vida);
               //Destroy(gameObject);

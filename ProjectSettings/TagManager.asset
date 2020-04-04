@@ -8,6 +8,8 @@ TagManager:
   - life_potion
   - water_terrain
   - solid_terrain
+  - moving_platform_y
+  - point_coin
   layers:
   - Default
   - TransparentFX

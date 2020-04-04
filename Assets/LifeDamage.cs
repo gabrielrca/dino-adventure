@@ -7,7 +7,9 @@ public class LifeDamage : MonoBehaviour
 {
     // Start is called before the first frame update
     private float vida;
+    private float coins;
     public GameObject lifeText;
+
     //public Text textbox;
     private Animator anim;
 
@@ -15,6 +17,7 @@ public class LifeDamage : MonoBehaviour
     void Start()
     {
       vida = 100;
+      coins = 0;
       //textbox = GetComponent<Text>();
       lifeText = GameObject.Find("LifeText");
       anim = GetComponent<Animator> ();
@@ -34,14 +37,22 @@ public class LifeDamage : MonoBehaviour
               //Debug.Log(vida);
               //Destroy(gameObject);
          }
+         if(other.gameObject.tag=="point_coin"){
+              coins += 1;
+            //  Physics2D.IgnoreCollision(coinObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+              //Debug.Log(vida);
+              //Destroy(gameObject);
+         }
+
 
     }
+
 
 
     // Update is called once per frame
     void Update()
     {
-     lifeText.GetComponent<Text>().text = "Vida:" + vida +"%";
+     lifeText.GetComponent<Text>().text = "Vida:" + vida +"% | Coins:" + coins + " ";
 
      if(vida < 0){
       anim.SetFloat("Vida", vida);
