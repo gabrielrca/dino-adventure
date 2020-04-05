@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeDamage : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LifeDamage : MonoBehaviour
     private float vida;
     private float coins;
     public GameObject lifeText;
+    public GameObject lifePotion;
 
     //public Text textbox;
     private Animator anim;
@@ -20,6 +22,7 @@ public class LifeDamage : MonoBehaviour
       coins = 0;
       //textbox = GetComponent<Text>();
       lifeText = GameObject.Find("LifeText");
+      lifePotion = GameObject.FindWithTag("life_potion");
       anim = GetComponent<Animator> ();
 
     }
@@ -52,11 +55,17 @@ public class LifeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     lifeText.GetComponent<Text>().text = "Vida:" + vida +"% | Coins:" + coins + " ";
+     lifeText.GetComponent<Text>().text = "Vida:" + vida +"% | Coins:" + coins * 1500 + " ";
 
-     if(vida < 0){
+     if(vida >= 100){
+       vida = 100;
+       Physics2D.IgnoreCollision(GetComponent<Collider2D>(), lifePotion.GetComponent<Collider2D>());
+     }
+
+     if(vida <= 0){
+       vida=0;
       anim.SetFloat("Vida", vida);
-      Invoke("Reload_Level", 1.0f);
+      Invoke("Reload_Level", 2.0f);
 
      }
 
@@ -64,7 +73,7 @@ public class LifeDamage : MonoBehaviour
     }
 
     void Reload_Level(){
-      Application.LoadLevel(Application.loadedLevel);
+     SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
 }
