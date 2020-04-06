@@ -32,10 +32,11 @@ public class TriggerEnemyFall : MonoBehaviour
          if(other.gameObject.tag=="Player"){
            //verifica qual eh o chao pelo if abaixo
            if(gameObject.name =="Floor_mace_1"){
-             //muda o tipo da mace espeficia... 
+             //muda o tipo da mace espeficia...
              //lembrando sempre de trocar o id XX se copiar e colar
              //senao pode dar problema de cair 2 maces em lugares diferentes
               MaceToFall1.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+              Invoke("vanish", 5.0f);
             }
             //verifica qual eh o chao pelo if abaixo
             if(gameObject.name =="Floor_mace_2"){
@@ -43,6 +44,7 @@ public class TriggerEnemyFall : MonoBehaviour
               //lembrando sempre de trocar o id XX se copiar e colar
               //senao pode dar problema de cair 2 maces em lugares diferentes
                MaceToFall2.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
              }
 
          }
@@ -55,4 +57,8 @@ public class TriggerEnemyFall : MonoBehaviour
     {
 
     }
+
+  
+
+
 }

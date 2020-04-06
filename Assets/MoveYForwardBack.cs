@@ -6,7 +6,7 @@ public class MoveYForwardBack : MonoBehaviour
 {
 
     private float MoveSpeed = 1f;
-    private float Distance = 20f;
+    public float Distance = 20f;
 
     private Vector2 originalPosition;
 

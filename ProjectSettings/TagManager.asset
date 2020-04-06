@@ -10,6 +10,7 @@ TagManager:
   - solid_terrain
   - moving_platform_y
   - point_coin
+  - dino_key_1
   layers:
   - Default
   - TransparentFX
