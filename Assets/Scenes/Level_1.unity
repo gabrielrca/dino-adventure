@@ -12199,7 +12199,7 @@ GameObject:
   - component: {fileID: 332719418}
   m_Layer: 0
   m_Name: Grass (242)
-  m_TagString: solid_terrain
+  m_TagString: moving_platform_y
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28071,7 +28071,7 @@ GameObject:
   - component: {fileID: 873131133}
   m_Layer: 0
   m_Name: Grass (240)
-  m_TagString: solid_terrain
+  m_TagString: moving_platform_y
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28936,7 +28936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aperte <espa\xE7o> para continuar >>"
+  m_Text: Aperte x para continuar >>
 --- !u!222 &908837461
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32602,7 +32602,7 @@ GameObject:
   - component: {fileID: 1021762797}
   m_Layer: 0
   m_Name: Grass (248)
-  m_TagString: solid_terrain
+  m_TagString: moving_platform_y
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57344,7 +57344,7 @@ GameObject:
   - component: {fileID: 1858124832}
   m_Layer: 0
   m_Name: Grass (239)
-  m_TagString: solid_terrain
+  m_TagString: moving_platform_y
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62104,7 +62104,7 @@ GameObject:
   - component: {fileID: 2001136282}
   m_Layer: 0
   m_Name: Grass (247)
-  m_TagString: solid_terrain
+  m_TagString: moving_platform_y
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64276,7 +64276,7 @@ GameObject:
   - component: {fileID: 2070281820}
   m_Layer: 0
   m_Name: Grass (241)
-  m_TagString: solid_terrain
+  m_TagString: moving_platform_y
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
