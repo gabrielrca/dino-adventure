@@ -86,10 +86,10 @@ public class WriteTextOnScreen : MonoBehaviour
         message_quantity = 1; // entao esse valor eh sempre quantidade - 1
 
         if(message_iterator == 0){ //se for a mensagem zero
-          WriteOnScreen("Oh! Estou tão no alto! Será que estou no céu?"); //fala mensagem zero
+          WriteOnScreen("Oh! Estou tão no alto! 0.o  \n Será que estou no céu?! "); //fala mensagem zero
         }
         if(message_iterator == 1){ //se for mensagem 1
-          WriteOnScreen("Preciso voltar para a terra e descobrir o que aconteceu!"); //fala mensagem 1
+          WriteOnScreen("Preciso voltar para a terra e descobrir o que aconteceu!!"); //fala mensagem 1
         }
 
           //verifica aqui se o iterador de mensagens diz que ja mostrou todas as mensagems
