@@ -11,3 +11,5 @@ Transparency site: https://www2.lunapic.com/editor/?action=transparent
 Tiles donwloaded from unity store in: https://assetstore.unity.com/packages/2d/environments/free-platform-game-assets-85838
 
 Rpg icon pack pego em: https://alexs-assets.itch.io/16x16-rpg-item-pack
+
+Alguns sons foram pegos de: https://www.fesliyanstudios.com/royalty-free-music/downloads-c/funny-music/21
